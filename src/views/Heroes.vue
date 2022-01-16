@@ -23,7 +23,7 @@ export default {
     const getHeroes = async () => {
       const arrayHeroes = []
       try {
-        const response = await fetch(`${base_url}:443/v1/public/characters?ts=1&apikey=${process.env.VUE_APP_API_KEY}&hash=${process.env.VUE_APP_HASH}`);
+        const response = await fetch(`${base_url}ts=1&apikey=${process.env.VUE_APP_API_KEY}&hash=${process.env.VUE_APP_HASH}`);
         const data = await response.json();
         data.data.results.forEach(hero => {
           arrayHeroes.push(hero)
