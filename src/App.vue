@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <h1 class="title">Some random Marvel heroes with </h1>
+    <h1 class="title">Spiderverse made with </h1>
     <img src="@/assets/logo.png" alt="Vue JS 3">
   </header>
   <router-view/>
