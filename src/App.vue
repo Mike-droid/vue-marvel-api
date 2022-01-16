@@ -1,30 +1,40 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/heroes">Heroes</router-link>
-  </div>
+  <header class="header">
+    <h1 class="title">Some random Marvel heroes with </h1>
+    <img src="@/assets/logo.png" alt="Vue JS 3">
+  </header>
   <router-view/>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+body {
+  background: rgb(251,112,19);
+  background: radial-gradient(circle, rgba(251,112,19,1) 0%, rgba(160,41,1,1) 29%, rgba(118,26,3,1) 49%, rgba(216,55,55,1) 100%);
+  font-family: 'Marvel', sans-serif;
 }
 
-#nav {
-  padding: 30px;
+body::-webkit-scrollbar{
+    width: 1em;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+body::-webkit-scrollbar-track{
+    background: #df831a;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+body::-webkit-scrollbar-thumb{
+    background: white;
+}
+
+.header {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  & img {
+    height: 50px;
+    width: 50px;
   }
 }
 </style>
