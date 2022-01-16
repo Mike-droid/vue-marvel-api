@@ -2,6 +2,7 @@
   <div class="hero">
     <h2>{{ hero.name }}</h2>
     <img :src="`${hero.thumbnail.path}.${hero.thumbnail.extension}`" :alt="hero.name">
+    <a :href="hero.urls[0].url" target="_blank">More info</a>
   </div>
 </template>
 
@@ -10,7 +11,8 @@ export default {
   props: {
     hero: {
       name: String,
-      thumbnail: String
+      thumbnail: String,
+      moreInfoUrl: String,
     }
   }
 }
